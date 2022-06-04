@@ -35,4 +35,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //annotationProcessor与compileOnly都是只编译并不打入apk中
+    //annotationProcessor：编译时生成代码，编译完就不需要了
+    annotationProcessor('com.tencent.tinker:tinker-android-anno:1.9.14.5')
+    //compileOnly：有重复的库时，可以剃除重复库，只保留一个库
+    compileOnly('com.tencent.tinker:tinker-android-anno:1.9.14.5')
+    //tinker的核心库
+    implementation('com.tencent.tinker:tinker-android-lib:1.9.14.5')
+    implementation 'com.android.support:multidex:1.0.3'
 }
